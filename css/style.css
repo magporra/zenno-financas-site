@@ -1,0 +1,399 @@
+/* Importação da fonte Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* === VARIÁVEIS GLOBAIS === */
+:root {
+  --zenno-primary: #9b30ff;       /* Roxo principal */
+  --zenno-dark: #212220;          /* Fundo escuro principal */
+  --zenno-green: #00b377;         /* Verde secundário */
+  --zenno-white: #ffffff;         /* Branco */
+  --zenno-gray-dark: #2c2c2c;     /* Cinza escuro usado em topbar/cards */
+  --zenno-gray: #333333;          /* Cinza padrão */
+  --zenno-gray-light: #3d3d3d;    /* Cinza claro para zebra table */
+  --zenno-gray-lighter: #444444;  /* Cinza mais claro para hover e fundo */
+}
+
+/* === ESTILO GLOBAL DO BODY === */
+body {
+  background-color: var(--zenno-dark) !important;
+  color: var(--zenno-white);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* === NAVBAR (MENU SUPERIOR) === */
+.zenno-navbar {
+  height: 120px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: var(--zenno-dark) !important;
+  width: 100%;
+}
+
+.zenno-navbar .navbar-brand {
+  font-size: 60px !important;
+  letter-spacing: 1px;
+  color: var(--zenno-white) !important;
+  margin-right: 50px;
+}
+
+.zenno-navbar .container {
+  width: 100%;
+  max-width: 1800px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.zenno-navbar img {
+  height: 80px;
+}
+
+.zenno-navbar .navbar-nav .nav-link {
+  font-size: 50px !important;
+  color: var(--zenno-white) !important;
+  margin-left: 25px;
+}
+
+.zenno-navbar .nav-link {
+  color: var(--zenno-white) !important;
+  font-weight: 500;
+  font-size: 26px !important;
+  transition: color 0.3s ease;
+}
+
+.zenno-navbar .nav-link:hover {
+  color: var(--zenno-primary) !important;
+}
+
+/* Botão de download */
+.btn-download {
+  background-color: var(--zenno-primary);
+  border: none;
+}
+
+.btn-download:hover {
+  background-color: #7c22cc;
+}
+
+.pt-nav {
+  height: 120px;
+}
+
+/* === HERO SECTION (Destaque da página) === */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--zenno-dark);
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 90px;
+  line-height: 1.2;
+}
+
+.highlight-purple {
+  color: var(--zenno-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+/* Ícone de rolagem com animação */
+.scroll-down {
+  font-size: 2rem;
+  margin-top: 20px;
+  color: var(--zenno-primary);
+  animation: bounce 1.5s infinite;
+}
+
+/* Animação do ícone de rolagem */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* === SEÇÃO INTRODUTÓRIA === */
+.intro-section {
+  background-color: var(--zenno-dark);
+  color: var(--zenno-white);
+  padding: 80px 0;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.fonte {
+  font-size: 90px;
+}
+
+.iconetexto {
+  font-size: 42px;
+}
+
+.icones {
+  height: 60px;
+}
+
+/* Cores auxiliares */
+.purple {
+  color: var(--zenno-primary);
+}
+
+/*quem somos*/
+
+.quem-somos-photo {
+  height: 300px !important; 
+  width: 300px !important;
+}
+
+.green {
+  color: var(--zenno-green);
+}
+
+/* === BOTÃO GOOGLE PLAY === */
+.btn-outline-light {
+  color: var(--zenno-white);
+  border-color: var(--zenno-white);
+}
+
+.btn-outline-light:hover {
+  background-color: var(--zenno-white);
+  color: var(--zenno-dark);
+}
+
+/* === RODAPÉ === */
+.zenno-footer {
+  background: var(--zenno-primary);
+  font-size: 30px;
+}
+
+.zennofooter {
+  height: 80px;
+}
+
+.text-green {
+  color: var(--zenno-green);
+}
+
+/* === SIDEBAR (Menu lateral) === */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #111;
+  padding: 20px;
+}
+
+.sidebar .logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar h3 {
+  color: var(--zenno-white);
+}
+
+.sidebar .menu a {
+  display: block;
+  padding: 8px 0;
+  color: #ddd; 
+  text-decoration: none;
+}
+
+.sidebar .menu a:hover {
+  color: var(--zenno-primary);
+}
+
+/* === CONTEÚDO PRINCIPAL === */
+.main-content {
+  margin-left: 240px;
+  padding: 20px;
+}
+
+/* === TOPO (barra superior) === */
+.topbar {
+  background: var(--zenno-gray-dark);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.search-box {
+  background: #333; 
+  border: none;
+  color: var(--zenno-white);
+}
+
+/* === CARDS === */
+.card-block {
+  background: var(--zenno-gray-dark);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* === AVATARES === */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.avatar-sm {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.avatar-lg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.avatars-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* === LISTA DE FUNCIONALIDADES === */
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  padding: 10px;
+  margin: 8px 0;
+  background: var(--zenno-gray-lighter);
+  border-radius: 6px;
+}
+
+/* === ARTIGOS === */
+.imagens-artigos {
+  height: 300px;
+  width: 413px;
+}
+
+.card {
+  background-color: #a1a1a1; 
+}
+
+/* === TABELA CENTRALIZADA NA TELA === */
+.tabela-container {
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
+  height: 100vh;             
+}
+
+/* === ESTILO DA TABELA PERSONALIZADA === */
+.zenno-table {
+  width: 600px;
+  border-collapse: collapse;
+  border: 2px solid var(--zenno-primary);
+  background-color: #2d2d2d; 
+}
+
+.zenno-table th,
+.zenno-table td {
+  border: 1px solid var(--zenno-primary);
+  padding: 15px;
+  text-align: left;
+  font-size: 18px;
+  color: var(--zenno-white);
+}
+
+.zenno-table th {
+  background-color: var(--zenno-gray);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Linhas alternadas */
+.zenno-table tr:nth-child(even) td {
+  background-color: var(--zenno-gray-light);
+}
+
+.zenno-table tr:nth-child(odd) td {
+  background-color: #2d2d2d; 
+}
+
+/* Efeito hover na tabela */
+.zenno-table tr:hover td {
+  background-color: var(--zenno-gray-lighter);
+}
+
+/* === PÁGINA DE ADMINISTRADORES === */
+.sidebar {
+  height: 100vh;
+  background-color: #111; 
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+}
+
+.sidebar .nav-link {
+  color: #ddd; 
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  color: var(--zenno-primary);
+  font-weight: bold;
+}
+
+.topbar {
+  margin-left: 220px;
+  background-color: var(--zenno-gray-dark);
+  padding: 15px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--zenno-white);
+}
+
+.content {
+  margin-left: 220px;
+  padding: 30px;
+}
+
+.zenno-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid var(--zenno-primary);
+  background-color: #2d2d2d; 
+}
+
+.zenno-table th,
+.zenno-table td {
+  border: 1px solid var(--zenno-primary);
+  padding: 15px;
+  text-align: left;
+  font-size: 18px
+}
+/*fale conosco */
+#conteudo-adm {
+  min-height: calc(100vh - 120px); /* Ajuste conforme o tamanho do seu header/footer */
+  padding-bottom: 40px; /* Espaço extra opcional */
+}
+
+
