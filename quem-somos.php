@@ -1,58 +1,101 @@
 <?php include 'header.php'; ?>
 
 <!-- INTRO -->
+<section class="section-spaced fade-in">
+  <div class="container text-center">
+    <span class="brand-tag">ZENNO</span>
+    <h2 class="fw-bold mt-2">Transformando a vida financeira das pessoas</h2>
+    <p class="lead max-700 mx-auto mt-3">
+      A Zenno nasceu com um propósito claro: tornar o controle financeiro acessível, prático
+      e motivador — para qualquer pessoa, em qualquer fase da vida.
+    </p>
+    <img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/business-2020957_1280.png"
+         class="img-fluid mt-4" style="max-width: 450px;" alt="">
+  </div>
+</section>
+
+<!-- MISSÃO / VISÃO / VALORES -->
 <section class="section-spaced">
   <div class="container">
-    <div class="text-center mb-4">
-      <span class="brand-tag">ZENNO</span>
-      <h2 class="fw-bold mt-2">Por que a ZENNO nasceu?</h2>
+    <div class="row g-4 mt-4">
+  <div class="col-md-4">
+    <div class="zenno-card text-center fade-in">
+      <i class="bi bi-flag fs-2 mb-3"></i>
+      <h5 class="fw-bold">Missão</h5>
+      <p>Tornar o controle financeiro acessível e simples para qualquer pessoa.</p>
     </div>
-    <p class="lead text-center max-700 mx-auto">
-      A Zenno Finanças nasceu para tornar o controle do seu dinheiro mais simples, prático e acessível,
-      ajudando você a conquistar estabilidade e liberdade financeira no seu próprio ritmo.
+  </div>
+
+  <div class="col-md-4">
+    <div class="zenno-card text-center fade-in">
+      <i class="bi bi-bullseye fs-2 mb-3"></i>
+      <h5 class="fw-bold">Visão</h5>
+      <p>Ser referência no Brasil em educação e organização financeira.</p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="zenno-card text-center fade-in">
+      <i class="bi bi-stars fs-2 mb-3"></i>
+      <h5 class="fw-bold">Valores</h5>
+      <p>Transparência, simplicidade e foco em ajudar a vida das pessoas.</p>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- A HISTÓRIA -->
+<section class="section-spaced fade-in">
+  <div class="container">
+    <h3 class="fw-bold mt-5 mb-4">Nossa História</h3>
+
+<div class="timeline">
+
+  <div class="timeline-item">
+    <h5 class="fw-bold">2024 — A ideia nasce</h5>
+    <p>Começamos a perceber o quanto as pessoas tinham dificuldade em organizar suas finanças.</p>
+  </div>
+
+  <div class="timeline-item">
+    <h5 class="fw-bold">2025 — Protótipo colocado em prática</h5>
+    <p>Desenvolvemos o primeiro rascunho da Zenno, já com funcionalidades básicas.</p>
+  </div>
+
+  <div class="timeline-item">
+    <h5 class="fw-bold">2026 — Expansão e futuro</h5>
+    <p>Pretendemos levar a ideia adiante, expandindo recursos e alcançando mais usuários.</p>
+  </div>
+
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- O QUE NÓS ACREDITAMOS -->
+<section class="section-spaced fade-in">
+  <div class="container text-center">
+    <h3 class="fw-bold">O que nos move?</h3>
+    <p class="lead max-700 mx-auto mt-3">
+      Acreditamos que **educação financeira não precisa ser complicada** — e que qualquer pessoa pode assumir
+      o controle da própria vida com as ferramentas certas.
     </p>
 
-    <!-- IDEALIZADORES -->
+    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/financial-growth-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--business-investment-profit-pack-illustrations-6360413.png"
+         class="img-fluid mt-4" style="max-width: 380px;" alt="">
+  </div>
+</section>
 
-    <div class="text-center mt-5">
-      <a href="#idealizadores" class="btn btn-primary"><i class="bi bi-people me-1"></i> Conheça os Idealizadores</a>
-    </div>
-
-    <hr class="my-5">
-
-    <h3 id="idealizadores" class="fw-bold mb-4">Idealizadores</h3>
-    <div class="row g-4">
-      <div class="col-12 col-md-6 col-lg-4 text-center">
-        <img src="img/team-lincoln.jpg" class="quem-somos-photo rounded-circle team-photo" alt="">
-        <p class="mt-2 mb-0 fw-semibold">Lincoln Silva Vieira</p>
-        <small class="text-muted">Desenvolvedor back-end</small>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 text-center">
-        <img src="img/team-matheus-lima.jfif" class="quem-somos-photo rounded-circle team-photo" alt="">
-        <p class="mt-2 mb-0 fw-semibold">Matheus de Lima Ribeiro</p>
-        <small class="text-muted">Desenvolvedor Mobile</small>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 text-center">
-        <img src="img/team-matheus-norberto.jfif" class="quem-somos-photo rounded-circle team-photo" alt="">
-        <p class="mt-2 mb-0 fw-semibold">Matheus Noberto dos Reis</p>
-        <small class="text-muted">Desenvolvedor front-end</small>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 text-center">
-        <img src="img/team-pedro.jfif" class="quem-somos-photo rounded-circle team-photo" alt="">
-        <p class="mt-2 mb-0 fw-semibold">Pedro Costa Pereira</p>
-        <small class="text-muted">Analista de Sistemas</small>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 text-center">
-        <img src="img/team-vinicius-sousa.jpg" class="quem-somos-photo rounded-circle team-photo" alt="">
-        <p class="mt-2 mb-0 fw-semibold">Vinicius Alves de Sousa</p>
-        <small class="text-muted">Desenvolvedor de Banco de Dados</small>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 text-center">
-        <img src="img/team-vinicius-a.jfif" class="quem-somos-photo rounded-circle team-photo" alt="">
-        <p class="mt-2 mb-0 fw-semibold">Vinicius Csetneky de Araujo</p>
-        <small class="text-muted">Desenvolvedor back-end</small>
-      </div>
-    </div>
+<!-- CTA FINAL -->
+<section class="section-spaced fade-in">
+  <div class="container text-center">
+    <h3 class="fw-bold mb-3">Pronto para começar sua jornada financeira?</h3>
+    <p class="lead mb-4">Baixe o aplicativo e dê o primeiro passo rumo à liberdade financeira.</p>
   </div>
 </section>
 

@@ -1,75 +1,62 @@
-/* Importação da fonte Montserrat */
+/* Fonte */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* === VARIÁVEIS GLOBAIS === */
+/* ================= VARIÁVEIS ================= */
 :root {
-  --zenno-primary: #9b30ff;       /* Roxo principal */
-  --zenno-dark: #212220;          /* Fundo escuro principal */
-  --zenno-green: #00b377;         /* Verde secundário */
-  --zenno-white: #ffffff;         /* Branco */
-  --zenno-gray-dark: #2c2c2c;     /* Cinza escuro usado em topbar/cards */
-  --zenno-gray: #333333;          /* Cinza padrão */
-  --zenno-gray-light: #3d3d3d;    /* Cinza claro para zebra table */
-  --zenno-gray-lighter: #444444;  /* Cinza mais claro para hover e fundo */
+  --zenno-primary: #9b30ff;
+  --zenno-dark: #212220;
+  --zenno-green: #00b377;
+  --zenno-white: #ffffff;
+  --zenno-gray-dark: #2c2c2c;
+  --zenno-gray: #333333;
+  --zenno-gray-light: #3d3d3d;
+  --zenno-gray-lighter: #444444;
 }
 
-/* === ESTILO GLOBAL DO BODY === */
+/* ================= GLOBAL ================= */
 body {
-  background-color: var(--zenno-dark) !important;
+  background-color: var(--zenno-dark);
   color: var(--zenno-white);
   font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-/* === NAVBAR (MENU SUPERIOR) === */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+/* ================= NAVBAR ================= */
 .zenno-navbar {
-  height: 120px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  background-color: var(--zenno-dark) !important;
-  width: 100%;
+  background-color: var(--zenno-dark);
+  padding: 15px 20px;
 }
 
 .zenno-navbar .navbar-brand {
-  font-size: 60px !important;
-  letter-spacing: 1px;
+  font-size: clamp(28px, 4vw, 42px);
   color: var(--zenno-white) !important;
-  margin-right: 50px;
-}
-
-.zenno-navbar .container {
-  width: 100%;
-  max-width: 1800px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
 }
 
 .zenno-navbar img {
-  height: 80px;
-}
-
-.zenno-navbar .navbar-nav .nav-link {
-  font-size: 50px !important;
-  color: var(--zenno-white) !important;
-  margin-left: 25px;
+  height: clamp(45px, 6vw, 75px);
 }
 
 .zenno-navbar .nav-link {
+  font-size: clamp(16px, 2.3vw, 24px);
+  margin-left: 15px;
   color: var(--zenno-white) !important;
-  font-weight: 500;
-  font-size: 26px !important;
-  transition: color 0.3s ease;
 }
 
 .zenno-navbar .nav-link:hover {
   color: var(--zenno-primary) !important;
 }
 
-/* Botão de download */
 .btn-download {
   background-color: var(--zenno-primary);
   border: none;
@@ -78,322 +65,300 @@ body {
 .btn-download:hover {
   background-color: #7c22cc;
 }
-
-.pt-nav {
-  height: 120px;
+/*impede a sobreposicao da nav*/
+body {
+    padding-top: 150px; 
 }
 
-/* === HERO SECTION (Destaque da página) === */
+
+/* ================= HERO ================= */
 .hero {
-  height: 100vh;
+  height: 80vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  background-color: var(--zenno-dark);
+  align-items: center;
   text-align: center;
+  padding: 20px;
 }
 
 .hero-title {
-  font-size: 90px;
-  line-height: 1.2;
+  font-size: clamp(32px, 6vw, 70px);
+  font-weight: 700;
 }
 
 .highlight-purple {
   color: var(--zenno-primary);
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
 }
 
-/* Ícone de rolagem com animação */
+/* ================= SCROLL ICON ================= */
 .scroll-down {
-  font-size: 2rem;
-  margin-top: 20px;
+  font-size: clamp(20px, 3vw, 32px);
   color: var(--zenno-primary);
+  margin-top: 15px;
   animation: bounce 1.5s infinite;
 }
 
-/* Animação do ícone de rolagem */
 @keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(8px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
 }
 
-/* === SEÇÃO INTRODUTÓRIA === */
+/* ================= SEÇÃO INTRO ================= */
 .intro-section {
-  background-color: var(--zenno-dark);
-  color: var(--zenno-white);
-  padding: 80px 0;
-}
-
-.feature-icon {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.fonte {
-  font-size: 90px;
-}
-
-.iconetexto {
-  font-size: 42px;
-}
-
-.icones {
-  height: 60px;
-}
-
-/* Cores auxiliares */
-.purple {
-  color: var(--zenno-primary);
-}
-
-/*quem somos*/
-
-.quem-somos-photo {
-  height: 300px !important; 
-  width: 300px !important;
-}
-
-.green {
-  color: var(--zenno-green);
-}
-
-/* === BOTÃO GOOGLE PLAY === */
-.btn-outline-light {
-  color: var(--zenno-white);
-  border-color: var(--zenno-white);
-}
-
-.btn-outline-light:hover {
-  background-color: var(--zenno-white);
-  color: var(--zenno-dark);
-}
-
-/* === RODAPÉ === */
-.zenno-footer {
-  background: var(--zenno-primary);
-  font-size: 30px;
-}
-
-.zennofooter {
-  height: 80px;
-}
-
-.text-green {
-  color: var(--zenno-green);
-}
-
-/* === SIDEBAR (Menu lateral) === */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 220px;
-  height: 100vh;
-  background: #111;
-  padding: 20px;
-}
-
-.sidebar .logo-img {
-  width: 40px;
-  height: 40px;
-}
-
-.sidebar h3 {
-  color: var(--zenno-white);
-}
-
-.sidebar .menu a {
-  display: block;
-  padding: 8px 0;
-  color: #ddd; 
-  text-decoration: none;
-}
-
-.sidebar .menu a:hover {
-  color: var(--zenno-primary);
-}
-
-/* === CONTEÚDO PRINCIPAL === */
-.main-content {
-  margin-left: 240px;
-  padding: 20px;
-}
-
-/* === TOPO (barra superior) === */
-.topbar {
-  background: var(--zenno-gray-dark);
-  padding: 10px 20px;
-  border-radius: 8px;
-}
-
-.search-box {
-  background: #333; 
-  border: none;
-  color: var(--zenno-white);
-}
-
-/* === CARDS === */
-.card-block {
-  background: var(--zenno-gray-dark);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-/* === AVATARES === */
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-.avatar-sm {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-right: 8px;
-}
-
-.avatar-lg {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: 5px;
-}
-
-.avatars-grid {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* === LISTA DE FUNCIONALIDADES === */
-.features-list {
-  list-style: none;
-  padding: 0;
-}
-
-.features-list li {
-  padding: 10px;
-  margin: 8px 0;
-  background: var(--zenno-gray-lighter);
-  border-radius: 6px;
-}
-
-/* === ARTIGOS === */
-.imagens-artigos {
-  height: 300px;
-  width: 413px;
-}
-
-.card {
-  background-color: #a1a1a1; 
-}
-
-/* === TABELA CENTRALIZADA NA TELA === */
-.tabela-container {
-  display: flex;
-  justify-content: center;   
-  align-items: center;       
-  height: 100vh;             
-}
-
-/* === ESTILO DA TABELA PERSONALIZADA === */
-.zenno-table {
-  width: 600px;
-  border-collapse: collapse;
-  border: 2px solid var(--zenno-primary);
-  background-color: #2d2d2d; 
-}
-
-.zenno-table th,
-.zenno-table td {
-  border: 1px solid var(--zenno-primary);
-  padding: 15px;
-  text-align: left;
-  font-size: 18px;
-  color: var(--zenno-white);
-}
-
-.zenno-table th {
-  background-color: var(--zenno-gray);
-  font-weight: bold;
+  padding: 60px 20px;
   text-align: center;
 }
 
-/* Linhas alternadas */
-.zenno-table tr:nth-child(even) td {
-  background-color: var(--zenno-gray-light);
+.fonte {
+  font-size: clamp(24px, 5vw, 48px);
 }
 
-.zenno-table tr:nth-child(odd) td {
-  background-color: #2d2d2d; 
+.iconetexto {
+  font-size: clamp(18px, 3.2vw, 28px);
 }
 
-/* Efeito hover na tabela */
-.zenno-table tr:hover td {
-  background-color: var(--zenno-gray-lighter);
+.icones {
+  height: clamp(40px, 6vw, 65px);
 }
 
-/* === PÁGINA DE ADMINISTRADORES === */
+/* ================= QUEM SOMOS ================= */
+.quem-somos-photo {
+  height: clamp(150px, 30vw, 260px);
+  width: clamp(150px, 30vw, 260px);
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* ================= FOOTER ================= */
+.zenno-footer {
+  background: var(--zenno-primary);
+  padding: 20px 10px;
+  text-align: center;
+  font-size: clamp(18px, 2.5vw, 22px);
+}
+.zennofooter{
+  max-height: 60px;
+}
+
+/* ================= SIDEBAR ================= */
 .sidebar {
-  height: 100vh;
-  background-color: #111; 
-  padding-top: 20px;
+  width: clamp(180px, 22vw, 240px);
   position: fixed;
   top: 0;
-  left: 0;
-  width: 220px;
+  bottom: 0;
+  background: #111;
+  padding: 20px;
+  overflow-y: auto;
 }
 
 .sidebar .nav-link {
-  color: #ddd; 
-  font-size: 18px;
-  margin: 8px 0;
+  font-size: clamp(14px, 2vw, 18px);
 }
 
-.sidebar .nav-link:hover,
-.sidebar .nav-link.active {
-  color: var(--zenno-primary);
-  font-weight: bold;
+/* ================= MAIN CONTENT ================= */
+.main-content {
+  margin-left: clamp(180px, 22vw, 240px);
+  padding: 20px;
 }
 
-.topbar {
-  margin-left: 220px;
-  background-color: var(--zenno-gray-dark);
-  padding: 15px 20px;
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--zenno-white);
-}
-
-.content {
-  margin-left: 220px;
-  padding: 30px;
-}
-
+/* ================= TABELA ================= */
 .zenno-table {
   width: 100%;
   border-collapse: collapse;
-  border: 2px solid var(--zenno-primary);
-  background-color: #2d2d2d; 
 }
 
 .zenno-table th,
 .zenno-table td {
+  padding: clamp(8px, 2vw, 16px);
+  font-size: clamp(12px, 1.5vw, 18px);
   border: 1px solid var(--zenno-primary);
-  padding: 15px;
-  text-align: left;
-  font-size: 18px
-}
-/*fale conosco */
-#conteudo-adm {
-  min-height: calc(100vh - 120px); /* Ajuste conforme o tamanho do seu header/footer */
-  padding-bottom: 40px; /* Espaço extra opcional */
 }
 
+/* Linhas alternadas */
+.zenno-table tr:nth-child(even) { background: var(--zenno-gray-light); }
+.zenno-table tr:nth-child(odd) { background: #2d2d2d; }
 
+.zenno-table tr:hover { background: var(--zenno-gray-lighter); }
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 768px) {
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .zenno-navbar .nav-link {
+    margin-left: 8px;
+  }
+
+  .hero {
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+}
+
+/* ARTIGOS – ESTILO DOS CARDS */
+
+/* Fundo do card */
+.card-news {
+    background-color: var(--zenno-gray) !important;
+    color: #fff !important;
+    border: none;
+}
+
+.imagens-artigos {
+    border-radius: 12px !important;
+    object-fit: cover;
+    width: 100%;
+    height: 200px; /* mantém padrão visual */
+}
+
+/* Ajuste do texto dentro do card */
+.card-news .card-title,
+.card-news p,
+.card-news small {
+    color: #fff !important;
+}
+
+/* Botão escuro */
+.btn-zenno-dark {
+    background-color: var(--zenno-dark) !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.btn-zenno-dark:hover {
+    opacity: 0.85;
+    color: #fff !important;
+}
+
+/* ANIMAÇÕES E EFEITOS */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.9s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon-bounce:hover {
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+/* SEÇÕES E ESTILOS GERAIS */
+
+.section-bg {
+  background: #f8f9fa;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+/* Para reduzir largura das seções em telas grandes */
+.max-700 {
+  max-width: 700px;
+}
+
+/* TIMELINE (História da Empresa) */
+
+.timeline {
+  border-left: 3px solid #6c63ff;
+  padding-left: 25px;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-item:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: #6c63ff;
+  border-radius: 50%;
+  position: absolute;
+  left: -33px;
+  top: 5px;
+}
+
+/*  ESTILO ZENNO */
+.zenno-card {
+  background: var(--zenno-gray);
+  color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  transition: transform .3s, background .3s;
+}
+
+.zenno-card:hover {
+  transform: translateY(-5px);
+  background: var(--zenno-gray-light);
+}
+
+/* BOTÃO ZENNO GRAY */
+.btn-zenno-gray {
+  background: var(--zenno-gray);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  transition: .3s ease;
+}
+
+.btn-zenno-gray:hover {
+  background: var(--zenno-gray-light);
+  color: #fff;
+}
+
+/* TIMELINE ESTILIZADA */
+.timeline {
+  border-left: 3px solid var(--zenno-purple);
+  padding-left: 25px;
+  position: relative;
+  margin-top: 30px;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-item:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: var(--zenno-purple);
+  border-radius: 50%;
+  position: absolute;
+  left: -33px;
+  top: 5px;
+}
+
+/* ANIMAÇÕES SUAVES*/
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp .8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
