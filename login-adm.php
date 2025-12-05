@@ -34,7 +34,7 @@ include 'header.php';
       </form>
 
       <div class="mt-3 text-center">
-        <a href="#">Esqueceu a senha?</a>
+        <a href="esqueci-senha.php">Esqueceu a senha?</a>
       </div>
     </div>
 </div>

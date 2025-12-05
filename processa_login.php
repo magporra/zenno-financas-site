@@ -7,13 +7,12 @@ $supabaseKey =  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsIn
 $tabela = 'admins';
 
 // Recebe dados do formulário
-$cpf = preg_replace('/\D/', '', $_POST['cpf']); // REMOVE . e -
+$cpf = trim($_POST['cpf']);
 $senha = trim($_POST['senha']);
 
-// Monta query para buscar o administrador com CPF igual ao informado
+// Busca no Supabase
 $url = $supabaseUrl."/rest/v1/$tabela?cpf=eq.$cpf";
 
-// cURL para consultar a tabela
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     "apikey: $supabaseKey",
@@ -24,16 +23,23 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $response = curl_exec($ch);
 curl_close($ch);
 
-// Decodifica JSON
 $data = json_decode($response, true);
 
-// Valida login
+// Verifica se encontrou o usuário
 if(!empty($data)) {
 
-    if (trim($data[0]['senha']) === $senha) {
+    $senhaHash = $data[0]['senha'];
+
+    // VERIFICA A SENHA
+    if (password_verify($senha, $senhaHash)) {
+
+        // Salva CPF e NOME
         $_SESSION['adm_logado'] = $data[0]['cpf'];
+        $_SESSION['nome_adm'] = $data[0]['nome'];  // 👈 AQUI ESTÁ O NOME
+
         header('Location: tela-adm.php');
         exit;
+
     } else {
         $_SESSION['erro_login'] = "Senha incorreta!";
         header('Location: login-adm.php');
